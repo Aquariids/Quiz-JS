@@ -1,6 +1,8 @@
-import quizData from "./questions";
+import quizData from "./module/questions"; 
+import * as functions from "./module/additionalFun";
 
-console.log(quizData);
+const {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer} = functions;
+
 // Элементы со страницы
 const questionEl = document.querySelector('#question');
 const a_text = document.querySelector('#a_text');
@@ -26,7 +28,7 @@ let score = 0;
 loadQuiz();
 // функция где мы помещаем на страницу вопрос и ответы
 function loadQuiz() {
-    deleteSelectAnswers();
+    deleteSelectAnswers(answerEls);
     const currentQuizData = quizData[currentQuiz];
     questionEl.textContent = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
@@ -57,17 +59,17 @@ btn.addEventListener('click', () => {
     if (answer) { // если ответ есть
         if (answer === quizData[currentQuiz].correct) { // если ответ совпадает с правильным
             score++;
-            addColorAnswer(); // Добавляем цвет для правильного ответа
+            addColorAnswer(`.${quizData[currentQuiz].correct}`); // Добавляем цвет для правильного ответа
         } else {
-            addColorAnswer();
+            addColorAnswer(`.${quizData[currentQuiz].correct}`);
         }
         currentQuiz++;
-        totalQuest();
+        totalQuest(total,currentQuiz,quizData.length);
         blockFocus(labels,btn); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
                 loadQuiz();
-                removeColorAnswer();
+                addColorAnswer(`.${quizData[currentQuiz].correct}`);
                 blockFocus(labels,btn); // разблокируем кнопку
                 clearInterval(time);
 
@@ -95,49 +97,4 @@ btn.addEventListener('click', () => {
 });
 
 
-
-function blockFocus(elements,element) {
-    element.classList.toggle('disabled');
-    elements.forEach((answerEl) => {
-        answerEl.classList.toggle('disabled');
-    });
-}
-
-
-// убираем нажатый кружок на input
-function deleteSelectAnswers() {
-    answerEls.forEach((answerEl) => {
-        answerEl.checked = false;
-    });
-}
-
-// указываем на правильный ответ
-function addColorAnswer() {
-    return document.querySelector(`.${quizData[currentQuiz].correct}`).classList.add('right');
-}
-// убираем цвет для правильного ответа
-function removeColorAnswer() {
-    return document.querySelector(`.${quizData[currentQuiz].correct}`).classList.remove('right');
-}
-
-// колличество отвеченных вопросов
-function totalQuest() {
-    total.textContent = `${currentQuiz}/${quizData.length}`
-}
-
-// указываем в конце теста текст от процента отвеченных
-function percentForAnswer (percent) {
-    if(percent === 100) {
-        return " <div class='textEnd'> <span class='right'> Вы ответили на все вопросы правильно!</span> </div>"
-    } 
-    else if (percent > 60 && percent != 100) {
-        return " <div class='textEnd'> <span class='middle'> Хорошо, но есть ошибки!</span> </div>"
-    } 
-    else if(percent < 50 && percent != 0) {
-       return "<div class='textEnd'> <span class='bad'> Плоховато, постарайтесь лучше! </span> </div>";
-    }
-    else  {
-        return "<div class='textEnd'> <span class ='wrong'> Вы не ответили ни на один вопрос! </span> </div>";
-    }
-}
-totalQuest();
+totalQuest(total,currentQuiz,quizData.length);
