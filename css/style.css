@@ -201,14 +201,11 @@ input:checked + label:before {
 }
 
 
-<<<<<<< HEAD
 
-=======
 .code {
     padding-left: 10px;
     padding-right: 10px;
 }
->>>>>>> test
 .hide {
     display: none;
 }
