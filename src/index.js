@@ -19,7 +19,8 @@ const {
     answerEls,
     quiz,
     total,
-    labels
+    labels,
+    codeForQuestion
 } = allDomElements
 
 // Текущий вопросо
@@ -27,9 +28,10 @@ let currentQuiz = 0;
 // количество правильно отвеченых вопросов
 let score = 0;
 
-
 loadQuiz();
 // функция где мы помещаем на страницу вопрос и ответы
+
+
 function loadQuiz() {
     deleteSelectAnswers(answerEls);
     const currentQuizData = quizData[currentQuiz];
@@ -40,6 +42,22 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d;
 
 }
+
+function hideCode (selector) {
+    selector.forEach((item,)=> {
+        item.classList.remove('show');
+        item.classList.add('hide');
+    })
+}
+function showCodeQuiz (selector,id) {
+    selector[id].classList.remove('hide');
+    selector[id].classList.add('show');
+}
+hideCode(codeForQuestion);
+showCodeQuiz(codeForQuestion,currentQuiz);
+
+
+
 
 // тут мы получаем айдишник ответа который выбрали
 function getSelected(selector) {
@@ -57,7 +75,9 @@ function getSelected(selector) {
 
 // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
 btn.addEventListener('click', () => {
+    
     const answer = getSelected(answerEls);
+
     if (answer) { // если ответ есть
         if (answer === quizData[currentQuiz].correct) { // если ответ совпадает с правильным
             score++;
@@ -66,11 +86,16 @@ btn.addEventListener('click', () => {
             addColorAnswer(`.${quizData[currentQuiz].correct}`);
         }
         currentQuiz++;
+        
+
         totalQuest(total, currentQuiz, quizData.length);
         blockFocus(labels, btn); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
                 loadQuiz();
+                hideCode(codeForQuestion);
+
+                showCodeQuiz(codeForQuestion,currentQuiz)
                 addColorAnswer(`.${quizData[currentQuiz].correct}`);
                 blockFocus(labels, btn); // разблокируем кнопку
                 clearInterval(time);

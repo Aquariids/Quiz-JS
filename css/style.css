@@ -170,7 +170,7 @@ input:checked + label:before {
 
   .total {
       text-align: right;
-      padding: 20px;
+      padding-right: 20px;
   }
 
 
@@ -179,4 +179,33 @@ input:checked + label:before {
       padding: 10px;
       font-size: 30px;
   }
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
   
+.question-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #fff;
+    height: 25px;
+    width: 250px;
+    overflow: hidden;
+
+}
+
+
+.code {
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+

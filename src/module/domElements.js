@@ -8,8 +8,8 @@ function domElements () {
     const answerEls = document.querySelectorAll('.answer');
     const quiz = document.querySelector('#quiz');
     const total = document.querySelector('.total');
-    const labels = document.querySelectorAll('.l')
-    
+    const labels = document.querySelectorAll('.l');
+    const codeForQuestion = document.querySelectorAll('.code')
     return {
         questionEl,
         a_text,
@@ -20,7 +20,8 @@ function domElements () {
         answerEls,
         quiz,
         total,
-        labels
+        labels,
+        codeForQuestion
     }
  }
 
