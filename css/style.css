@@ -196,13 +196,14 @@ input:checked + label:before {
     text-align: center;
     background-color: #fff;
     height: 25px;
-    width: 250px;
     overflow: hidden;
 
 }
 
 
 .code {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .hide {
     display: none;
