@@ -97,16 +97,19 @@ btn.addEventListener('click', () => {
             }, 1000)
 
 
-        } else { // Результат
+        } else {
+            let percent = Math.floor(score / quizData.length * 100); // Вычесляем процент правильных ответов
+            // Результат
             const time = setInterval(() => {
                 quiz.innerHTML = `
                 <div class="hi"><img class="picture" src="icon.png" alt="hi">  </div>
-                <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ты ответил правильно на ${score}/${quizData.length} вопросов! </h2>
+                <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: ${score} из ${quizData.length} <span class="percent"> ${percent}% </span> ${per(percent)} </h2>
                 <button class="buttonReloaded" onClick="location.reload()"> Попробовать еще раз </button>
             `
                 clearInterval(time);
 
             }, 1000)
+
 
         }
     }
@@ -132,4 +135,18 @@ function totalQuest() {
     total.textContent = `${currentQuiz}/${quizData.length}`
 }
 
+function per (percent) {
+    if(percent === 100) {
+        return " <div class='textEnd'> <span class='right'> Вы ответили на все вопросы правильно!</span> </div>"
+    } 
+    else if (percent > 60 && percent != 100) {
+        return " <div class='textEnd'> <span class='middle'> Хорошо, но есть ошибки!</span> </div>"
+    } 
+    else if(percent < 50 && percent != 0) {
+       return "<div class='textEnd'> <span class='bad'> Плоховато, постарайтесь лучше! </span> </div>";
+    }
+    else  {
+        return "<div class='textEnd'> <span class ='wrong'> Вы не ответили ни на один вопрос! </span> </div>";
+    }
+}
 totalQuest();

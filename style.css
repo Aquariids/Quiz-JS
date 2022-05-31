@@ -119,17 +119,23 @@ input:checked + label:before {
 
   
 .wrong {
-
     text-shadow: 0 0 0 rgb(221, 37, 37);
 }
 
-
 .right {
     text-shadow: 0 0 0 rgb(37, 221, 58);
+}
 
+.middle {
+    text-shadow: 0 0 0 rgb(186, 245, 9);
 }
     
-
+.bad {
+    text-shadow: 0 0 0 rgb(245, 218, 9);
+}
+.textEnd {
+    font-size: 14px;
+}
 
 
 
@@ -164,4 +170,10 @@ input:checked + label:before {
       padding: 20px;
   }
 
+
+  .percent {
+      display: block;
+      padding: 10px;
+      font-size: 30px;
+  }
   
