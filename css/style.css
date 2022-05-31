@@ -19,8 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: #C9D1D9;
+    color:#C9D1D9;
     font-family: system;      
 }
 
@@ -91,7 +90,6 @@ li {
     margin: 15px 0;
 }
 input {
-   
     display: none;
 }
 
@@ -100,7 +98,7 @@ input {
 label {
     color: transparent;
     cursor: pointer;
-    text-shadow: 0 0 0 rgb(215, 203, 203);
+    text-shadow: 0 0 0 rgb(255, 254, 254);
 }
 
 
@@ -126,15 +124,16 @@ input:checked + label:before {
 }
 
 .right {
-    text-shadow: 0 0 0 rgb(37, 221, 58);
+    display: inline;
+    text-shadow: 0 0 0 rgb(0, 255, 30);
 }
 
 .middle {
-    text-shadow: 0 0 0 rgb(186, 245, 9);
+    text-shadow: 0 0 0 rgb(225, 255, 1);
 }
  
 .bad {
-    text-shadow: 0 0 0 rgb(245, 218, 9);
+    text-shadow: 0 0 0 rgb(245, 162, 9);
 }
 .textEnd {
     font-size: 14px;

@@ -85,7 +85,7 @@ btn.addEventListener('click', () => {
             const time = setInterval(() => {
                 quiz.innerHTML = `
                 <div class="hi"><img class="picture" src="icon.png" alt="hi">  </div>
-                <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: ${score} из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
+                <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
                 <button class="buttonReloaded" onClick="location.reload()"> Попробовать еще раз </button>
             `
                 clearInterval(time);
