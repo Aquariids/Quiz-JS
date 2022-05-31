@@ -1,0 +1,24 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "quiz for my js conspects",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aquariids/Quiz-for-JS.git"
+  },
+  "author": "dima kun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aquariids/Quiz-for-JS/issues"
+  },
+  "homepage": "https://github.com/Aquariids/Quiz-for-JS#readme"
+}
