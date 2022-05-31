@@ -158,3 +158,10 @@ input:checked + label:before {
     pointer-events: none;
     user-select:none;
   }
+
+  .total {
+      text-align: right;
+      padding: 20px;
+  }
+
+  

@@ -37,7 +37,7 @@ const d_text = document.querySelector('#d_text');
 const btn = document.querySelector('#btn');
 const answerEls = document.querySelectorAll('.answer');
 const quiz = document.querySelector('#quiz');
-
+const total = document.querySelector('.total');
 
 
 
@@ -85,6 +85,7 @@ btn.addEventListener('click', () => {
             addColorAnswer();
         }
         currentQuiz++;
+        totalQuest();
         btn.classList.add('disabledBtn'); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
@@ -126,3 +127,9 @@ function addColorAnswer() {
 function removeColorAnswer() {
     return document.querySelector(`.${quizData[currentQuiz].correct}`).classList.remove('right');
 }
+
+function totalQuest() {
+    total.textContent = `${currentQuiz}/${quizData.length}`
+}
+
+totalQuest();
