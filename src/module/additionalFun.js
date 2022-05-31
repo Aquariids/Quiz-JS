@@ -41,5 +41,16 @@
         return "<div class='textEnd'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
     }
 }
-
-export {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer}
+// скрываем код для вопросов
+function hideCode (selector) {
+    selector.forEach((item,)=> {
+        item.classList.remove('show');
+        item.classList.add('hide');
+    })
+}
+// Показываю код обратно
+function showCodeQuiz (selector,id) {
+    selector[id].classList.remove('hide');
+    selector[id].classList.add('show');
+}
+export {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer,hideCode,showCodeQuiz}

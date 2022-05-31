@@ -7,7 +7,9 @@ const {
     deleteSelectAnswers,
     addColorAnswer,
     totalQuest,
-    percentForAnswer
+    percentForAnswer,
+    hideCode,
+    showCodeQuiz
 } = additionalFun;
 const {
     questionEl,
@@ -43,16 +45,8 @@ function loadQuiz() {
 
 }
 
-function hideCode (selector) {
-    selector.forEach((item,)=> {
-        item.classList.remove('show');
-        item.classList.add('hide');
-    })
-}
-function showCodeQuiz (selector,id) {
-    selector[id].classList.remove('hide');
-    selector[id].classList.add('show');
-}
+
+
 hideCode(codeForQuestion);
 showCodeQuiz(codeForQuestion,currentQuiz);
 
