@@ -11,6 +11,7 @@ const btn = document.querySelector('#btn');
 const answerEls = document.querySelectorAll('.answer');
 const quiz = document.querySelector('#quiz');
 const total = document.querySelector('.total');
+const labels = document.querySelectorAll('.l')
 
 
 
@@ -62,12 +63,12 @@ btn.addEventListener('click', () => {
         }
         currentQuiz++;
         totalQuest();
-        btn.classList.add('disabledBtn'); // блокируем кнопку для нажатий
+        blockFocus(labels,btn); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
                 loadQuiz();
                 removeColorAnswer();
-                btn.classList.remove('disabledBtn'); // разблокируем кнопку
+                blockFocus(labels,btn); // разблокируем кнопку
                 clearInterval(time);
 
             }, 1000)
@@ -92,6 +93,15 @@ btn.addEventListener('click', () => {
     }
 
 });
+
+
+
+function blockFocus(elements,element) {
+    element.classList.toggle('disabled');
+    elements.forEach((answerEl) => {
+        answerEl.classList.toggle('disabled');
+    });
+}
 
 
 // убираем нажатый кружок на input
