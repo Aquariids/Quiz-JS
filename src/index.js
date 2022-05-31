@@ -1,23 +1,26 @@
-import quizData from "./module/questions"; 
-import * as functions from "./module/additionalFun";
+import quizData from "./module/questions";
+import * as additionalFun from "./module/additionalFun";
+import allDomElements from "./module/domElements";
 
-const {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer} = functions;
-
-// Элементы со страницы
-const questionEl = document.querySelector('#question');
-const a_text = document.querySelector('#a_text');
-const b_text = document.querySelector('#b_text');
-const c_text = document.querySelector('#c_text');
-const d_text = document.querySelector('#d_text');
-const btn = document.querySelector('#btn');
-const answerEls = document.querySelectorAll('.answer');
-const quiz = document.querySelector('#quiz');
-const total = document.querySelector('.total');
-const labels = document.querySelectorAll('.l')
-
-
-
-
+const {
+    blockFocus,
+    deleteSelectAnswers,
+    addColorAnswer,
+    totalQuest,
+    percentForAnswer
+} = additionalFun;
+const {
+    questionEl,
+    a_text,
+    b_text,
+    c_text,
+    d_text,
+    btn,
+    answerEls,
+    quiz,
+    total,
+    labels
+} = allDomElements
 
 // Текущий вопросо
 let currentQuiz = 0;
@@ -39,9 +42,9 @@ function loadQuiz() {
 }
 
 // тут мы получаем айдишник ответа который выбрали
-function getSelected() {
+function getSelected(selector) {
     let answer = undefined;
-    answerEls.forEach((answerEl) => {
+    selector.forEach((answerEl) => {
         if (answerEl.checked) {
             return answer = answerEl.id;
         }
@@ -50,12 +53,11 @@ function getSelected() {
     });
 
     return answer;
-
 }
 
 // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
 btn.addEventListener('click', () => {
-    const answer = getSelected();
+    const answer = getSelected(answerEls);
     if (answer) { // если ответ есть
         if (answer === quizData[currentQuiz].correct) { // если ответ совпадает с правильным
             score++;
@@ -64,20 +66,20 @@ btn.addEventListener('click', () => {
             addColorAnswer(`.${quizData[currentQuiz].correct}`);
         }
         currentQuiz++;
-        totalQuest(total,currentQuiz,quizData.length);
-        blockFocus(labels,btn); // блокируем кнопку для нажатий
+        totalQuest(total, currentQuiz, quizData.length);
+        blockFocus(labels, btn); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
                 loadQuiz();
                 addColorAnswer(`.${quizData[currentQuiz].correct}`);
-                blockFocus(labels,btn); // разблокируем кнопку
+                blockFocus(labels, btn); // разблокируем кнопку
                 clearInterval(time);
 
             }, 1000)
 
 
         } else {
-             // Вычесляем процент правильных ответов
+            // Вычесляем процент правильных ответов
             const percent = Math.floor(score / quizData.length * 100);
             // Результат
             const time = setInterval(() => {
@@ -97,4 +99,4 @@ btn.addEventListener('click', () => {
 });
 
 
-totalQuest(total,currentQuiz,quizData.length);
+totalQuest(total, currentQuiz, quizData.length);

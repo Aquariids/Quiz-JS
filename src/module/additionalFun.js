@@ -1,4 +1,5 @@
 
+
 // блокируем кнопку и инпуты полсе ответа
  function blockFocus(elements,element) {
     element.classList.toggle('disabled');
