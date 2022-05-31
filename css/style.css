@@ -175,9 +175,12 @@ input:checked + label:before {
 
 
   .percent {
+      
+      width: 75px;
+      margin: 0 auto;
       display: block;
-      padding: 10px;
-      font-size: 30px;
+      padding: 5px;
+      font-size: 28px;
   }
   .container {
       display: flex;
