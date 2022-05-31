@@ -88,8 +88,7 @@ btn.addEventListener('click', () => {
             const time = setInterval(() => {
                 loadQuiz();
                 hideCode(codeForQuestion);
-
-                showCodeQuiz(codeForQuestion,currentQuiz)
+                showCodeQuiz(codeForQuestion,currentQuiz);
                 addColorAnswer(`.${quizData[currentQuiz].correct}`);
                 blockFocus(labels, btn); // разблокируем кнопку
                 clearInterval(time);

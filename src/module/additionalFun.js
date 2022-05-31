@@ -53,4 +53,4 @@ function showCodeQuiz (selector,id) {
     selector[id].classList.remove('hide');
     selector[id].classList.add('show');
 }
-export {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer,hideCode,showCodeQuiz}
+export {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer,hideCode,showCodeQuiz};
