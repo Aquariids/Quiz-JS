@@ -4,7 +4,6 @@ import allDomElements from "./module/domElements";
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
     const {
         blockFocus,
         deleteSelectAnswers,
@@ -36,8 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     loadQuiz();
     // функция где мы помещаем на страницу вопрос и ответы
-    
-    
     function loadQuiz() {
         deleteSelectAnswers(answerEls);
         const currentQuizData = quizData[currentQuiz];
@@ -53,9 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     hideCode(codeForQuestion);
     showCodeQuiz(codeForQuestion,currentQuiz);
-    
-    
-    
     
     
     // тут мы получаем айдишник ответа который выбрали
@@ -92,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             totalQuest(total, currentQuiz, quizData.length);
             blockFocus(labels, btn); // блокируем кнопку для нажатий
             if (currentQuiz < quizData.length) {
-                const time = setInterval(() => {
+                const blockInterval = setInterval(() => {
                     addColorAnswer(`.${correctAnswer}`); // убираем цвет
                     if (answer !== correctAnswer) {
                         addNotRightAnswer(`.${answer}`); // убираем для неправильного
@@ -101,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     hideCode(codeForQuestion);
                     showCodeQuiz(codeForQuestion,currentQuiz);
                     blockFocus(labels, btn); // разблокируем кнопку
-                    clearInterval(time);
+                    clearInterval(blockInterval);
     
                 }, 1000)
     
@@ -110,13 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Вычесляем процент правильных ответов
                 const percent = Math.floor(score / quizData.length * 100);
                 // Результат
-                const time = setInterval(() => {
+                    const blockInterval = setInterval(() => {
                     quiz.innerHTML = `
                     <div class="hi"><img class="picture" src="icon.png" alt="hi">  </div>
                     <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
                     <button class="buttonReloaded" onClick="location.reload()"> Попробовать еще раз </button>
                 `
-                    clearInterval(time);
+                    clearInterval(blockInterval);
     
                 }, 1000)
     
