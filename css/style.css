@@ -201,7 +201,16 @@ input:checked + label:before {
 }
 
 
+<<<<<<< HEAD
 
+=======
+.not-right {
+    
+        display: inline;
+        text-shadow: 0 0 0 rgb(255, 13, 0);
+    
+}
+>>>>>>> test
 .code {
     padding-left: 10px;
     padding-right: 10px;

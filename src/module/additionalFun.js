@@ -20,6 +20,10 @@
  function addColorAnswer(classes) {
     return document.querySelector(classes).classList.toggle('right');
 }
+// указываем на неправильный ответ
+function addNotRightAnswer(classes) {
+    return document.querySelector(classes).classList.toggle('not-right');
+}
 
 // колличество отвеченных вопросов
  function totalQuest(selector,currentQuest,allQuest) {
@@ -53,4 +57,8 @@ function showCodeQuiz (selector,id) {
     selector[id].classList.remove('hide');
     selector[id].classList.add('show');
 }
+<<<<<<< HEAD
 export {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer,hideCode,showCodeQuiz};
+=======
+export {blockFocus,deleteSelectAnswers,addColorAnswer,totalQuest,percentForAnswer,hideCode,showCodeQuiz,addNotRightAnswer}
+>>>>>>> test

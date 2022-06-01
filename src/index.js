@@ -9,7 +9,8 @@ const {
     totalQuest,
     percentForAnswer,
     hideCode,
-    showCodeQuiz
+    showCodeQuiz,
+    addNotRightAnswer
 } = additionalFun;
 const {
     questionEl,
@@ -53,6 +54,7 @@ showCodeQuiz(codeForQuestion,currentQuiz);
 
 
 
+
 // тут мы получаем айдишник ответа который выбрали
 function getSelected(selector) {
     let answer = undefined;
@@ -75,21 +77,32 @@ btn.addEventListener('click', () => {
     if (answer) { // если ответ есть
         if (answer === quizData[currentQuiz].correct) { // если ответ совпадает с правильным
             score++;
-            addColorAnswer(`.${quizData[currentQuiz].correct}`); // Добавляем цвет для правильного ответа
+            addColorAnswer(`.${quizData[currentQuiz].correct}`); // Добавляем зеленый цвет для правильного ответа
         } else {
+<<<<<<< HEAD
             addColorAnswer(`.${quizData[currentQuiz].correct}`);
 
+=======
+            addColorAnswer(`.${quizData[currentQuiz].correct}`); // тоже добавляем для правильного
+
+        }
+        if(answer != quizData[currentQuiz].correct) { // если ответ не правильный, то добавляем красный
+            addNotRightAnswer(`.${answer}`)
+>>>>>>> test
         }
         currentQuiz++;
-        
-
         totalQuest(total, currentQuiz, quizData.length);
         blockFocus(labels, btn); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
                 loadQuiz();
                 hideCode(codeForQuestion);
+<<<<<<< HEAD
                 showCodeQuiz(codeForQuestion,currentQuiz);
+=======
+                addNotRightAnswer(`.${answer}`)
+                showCodeQuiz(codeForQuestion,currentQuiz)
+>>>>>>> test
                 addColorAnswer(`.${quizData[currentQuiz].correct}`);
                 blockFocus(labels, btn); // разблокируем кнопку
                 clearInterval(time);
