@@ -189,15 +189,13 @@ input:checked + label:before {
   }
   
 .question-block{
+    align-items: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     border-radius: 12px;
     text-align: center;
     background-color: #fff;
-    height: 25px;
-    overflow: hidden;
-
 }
 
 
@@ -208,14 +206,18 @@ input:checked + label:before {
     
 }
 .code {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px 10px 5px 10px;
+
 }
 .hide {
     display: none;
 }
 
+
 .show {
-    display: inline;
+    display: block;
 }
 
+.question-block div {
+    text-align: center;
+}
