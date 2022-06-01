@@ -79,16 +79,11 @@ btn.addEventListener('click', () => {
             score++;
             addColorAnswer(`.${quizData[currentQuiz].correct}`); // Добавляем зеленый цвет для правильного ответа
         } else {
-<<<<<<< HEAD
-            addColorAnswer(`.${quizData[currentQuiz].correct}`);
-
-=======
             addColorAnswer(`.${quizData[currentQuiz].correct}`); // тоже добавляем для правильного
 
         }
         if(answer != quizData[currentQuiz].correct) { // если ответ не правильный, то добавляем красный
             addNotRightAnswer(`.${answer}`)
->>>>>>> test
         }
         currentQuiz++;
         totalQuest(total, currentQuiz, quizData.length);
@@ -97,12 +92,8 @@ btn.addEventListener('click', () => {
             const time = setInterval(() => {
                 loadQuiz();
                 hideCode(codeForQuestion);
-<<<<<<< HEAD
-                showCodeQuiz(codeForQuestion,currentQuiz);
-=======
                 addNotRightAnswer(`.${answer}`)
                 showCodeQuiz(codeForQuestion,currentQuiz)
->>>>>>> test
                 addColorAnswer(`.${quizData[currentQuiz].correct}`);
                 blockFocus(labels, btn); // разблокируем кнопку
                 clearInterval(time);
