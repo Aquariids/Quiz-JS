@@ -1,29 +1,51 @@
 const quizData = [{
-        question: 'Что выведет в консоль?',
-        a: 'Останавливается на первой лжи',
-        b: 'Останавливается на первой правде',
-        c: 'Останавливается на твоей маме',
-        d: 'Останавливается на папе',
-        correct: 'a',
-
-    },
-    {
-        question: 'А я долбаеб?',
-        a: 'Да',
-        b: 'Нет',
-        c: 'дебил',
-        d: 'Останавливается на папе',
-        correct: 'a',
-    },
-
-    {
-        question: 'А кто же долбаеб?',
-        a: 'Ты',
-        b: 'Серега',
-        c: 'hi',
-        d: 'Останавливается на папе',
-        correct: 'a',
-    }
+    question: 'Что выведет в консоль?',
+    a: '"false"',
+    b: '1',
+    c: 'true',
+    d: '0',
+    correct: 'a',
+    id:'1',
+},
+{ 
+    question: 'Какое значение будет в result?',
+    a: 'null',
+    b: '2',
+    c: '3',
+    d: 'undefined',
+    correct: 'd',
+    id:'2',
+},
+{
+    question: 'Какое значение будет в result?',
+    a: 'boolean',
+    b: 'null',
+    c: 'undefined',
+    d: '0',
+    correct: 'a',
+    id:'3',
+},
+{
+    question: 'Что выведет в консоль?',
+    a: 'false',
+    b: '"Аниме"',
+    c: '0',
+    d: 'Останавливается на папе',
+    correct: 'b',
+    id:'4',
+},
+{
+    question: 'Какое значение будет в result?',
+    a: 'null',
+    b: '1',
+    c: '2',
+    d: 'throw a SyntaxError',
+    correct: 'c',
+    id:'5',
+},
 ];
 
 export default quizData;
+
+
+

@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuiz = 0;
     // количество правильно отвеченых вопросов
     let score = 0;
-    let correctAnswer = quizData[currentQuiz].correct; 
     loadQuiz();
     // функция где мы помещаем на страницу вопрос и ответы
     
@@ -77,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
         
         const answer = getSelected(answerEls);
-    
+        let correctAnswer = quizData[currentQuiz].correct; 
+
         if (answer) { // если ответ есть
             if (answer === correctAnswer) { // если ответ совпадает с правильным
                 score++;
