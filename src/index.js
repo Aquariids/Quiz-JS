@@ -30,7 +30,7 @@ const {
 let currentQuiz = 0;
 // количество правильно отвеченых вопросов
 let score = 0;
-
+let correctAnswer = quizData[currentQuiz].correct; 
 loadQuiz();
 // функция где мы помещаем на страницу вопрос и ответы
 
@@ -75,14 +75,13 @@ btn.addEventListener('click', () => {
     const answer = getSelected(answerEls);
 
     if (answer) { // если ответ есть
-        if (answer === quizData[currentQuiz].correct) { // если ответ совпадает с правильным
+        if (answer === correctAnswer) { // если ответ совпадает с правильным
             score++;
-            addColorAnswer(`.${quizData[currentQuiz].correct}`); // Добавляем зеленый цвет для правильного ответа
+            addColorAnswer(`.${correctAnswer}`); // Добавляем зеленый цвет для правильного ответа
         } else {
-            addColorAnswer(`.${quizData[currentQuiz].correct}`); // тоже добавляем для правильного
-
+            addColorAnswer(`.${correctAnswer}`); // подсвечиваем правильный если ответили не правильно
         }
-        if(answer != quizData[currentQuiz].correct) { // если ответ не правильный, то добавляем красный
+        if(answer !== correctAnswer) { // если ответ не правильный, то добавляем красный
             addNotRightAnswer(`.${answer}`)
         }
         currentQuiz++;
@@ -90,11 +89,13 @@ btn.addEventListener('click', () => {
         blockFocus(labels, btn); // блокируем кнопку для нажатий
         if (currentQuiz < quizData.length) {
             const time = setInterval(() => {
+                addColorAnswer(`.${correctAnswer}`); // убираем цвет
+                if (answer !== correctAnswer) {
+                    addNotRightAnswer(`.${answer}`); // убираем для неправильного
+                }
                 loadQuiz();
                 hideCode(codeForQuestion);
-                addNotRightAnswer(`.${answer}`)
-                showCodeQuiz(codeForQuestion,currentQuiz)
-                addColorAnswer(`.${quizData[currentQuiz].correct}`);
+                showCodeQuiz(codeForQuestion,currentQuiz);
                 blockFocus(labels, btn); // разблокируем кнопку
                 clearInterval(time);
 
