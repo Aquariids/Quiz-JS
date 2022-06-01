@@ -78,6 +78,7 @@ btn.addEventListener('click', () => {
             addColorAnswer(`.${quizData[currentQuiz].correct}`); // Добавляем цвет для правильного ответа
         } else {
             addColorAnswer(`.${quizData[currentQuiz].correct}`);
+
         }
         currentQuiz++;
         
