@@ -35,13 +35,16 @@ function addNotRightAnswer(classes) {
     if(percent === 100) {
         return " <div class='textEnd'> <span class='right'> Отлично, можешь собой гордиться!</span> </div>"
     } 
-    else if (percent > 60 && percent != 100) {
+    else if (percent >= 60 && percent != 100) {
         return " <div class='textEnd'> <span class='middle'> Хорошо, но есть ошибки!</span> </div>"
     } 
-    else if(percent < 50 && percent != 0) {
+    else if(percent <= 50 && percent != 0 && percent > 20) {
        return "<div class='textEnd'> <span class='bad'> Могло бы быть и хуже, попробуй еще! </span> </div>";
     }
-    else  {
+    else if (percent <= 20 && percent != 0) {
+        return "<div class='textEnd'> <span class='bad'> Ну ты хотя бы пытался! </span> </div>";
+    }
+    else if (percent === 0) {
         return "<div class='textEnd'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
     }
 }
