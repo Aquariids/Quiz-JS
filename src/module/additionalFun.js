@@ -37,7 +37,7 @@ function percentForAnswer(percent) {
     } else if (percent <= 50 && percent != 0 && percent > 20) {
         return "<div class='textEnd'> <span class='bad'> Могло бы быть и хуже, попробуй еще! </span> </div>";
     } else if (percent <= 20 && percent != 0) {
-        return "<div class='textEnd'> <span class='bad'>Попытка не птыка! </span> </div>";
+        return "<div class='textEnd'> <span class='bad'>Попытка не пытка! </span> </div>";
     } else if (percent === 0) {
         return "<div class='textEnd'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
     }
