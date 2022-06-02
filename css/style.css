@@ -219,7 +219,6 @@ input:checked + label:before {
     
 }
 .code {
-   
     padding: 5px 10px 5px 10px;
 
 }
@@ -232,6 +231,3 @@ input:checked + label:before {
     display: block;
 }
 
-.question-block div {
-    text-align: center;
-}
