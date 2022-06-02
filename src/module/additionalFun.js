@@ -42,7 +42,7 @@ function addNotRightAnswer(classes) {
        return "<div class='textEnd'> <span class='bad'> Могло бы быть и хуже, попробуй еще! </span> </div>";
     }
     else if (percent <= 20 && percent != 0) {
-        return "<div class='textEnd'> <span class='bad'> Ну ты хотя бы пытался! </span> </div>";
+        return "<div class='textEnd'> <span class='bad'>Попытка не птыка! </span> </div>";
     }
     else if (percent === 0) {
         return "<div class='textEnd'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
