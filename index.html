@@ -8,48 +8,57 @@
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/preloader.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
     <title>Quiz Js</title>
 </head>
 
 <body class="white">
-   
-   
+
+
     <div class="preloader">
         <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor"
-            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
-          </path>
+            <path fill="currentColor"
+                d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+            </path>
         </svg>
-      </div>
+    </div>
     <div class="quiz-container" id="quiz">
         <a href="#" class="themetoggle">
             <span id="sun" class="material-symbols-outlined">
                 sunny
-                </span>
-                <span id="moon" class="material-symbols-outlined">
-                    bedtime
-                    </span>
+            </span>
+            <span id="moon" class="material-symbols-outlined">
+                bedtime
+            </span>
         </a>
-    
+
         <div id="black-icon" class="icon"><img class="picture-black" src="./icons/icon.png" alt="hi"> </div>
-        <div id="white-icon" class="icon" ><img class="picture-white" src="./icons/icon2.png" alt="hi1"> </div>
+        <div id="white-icon" class="icon"><img class="picture-white" src="./icons/icon2.png" alt="hi1"> </div>
 
         <div class="total"></div>
-        <div class="container"><pre class="question-block  lang-js"> 
+        <div class="container">
+            <pre class="question-block  lang-js">
             <code id="1"class="code prettyprint">console.log("false" || true || 1 || 0);</code>
             <code id='2'class="code prettyprint">const array = [1,2,3];<br>result = array[3]; </code>
             <code id="3"class="code prettyprint">const result = typeof false;</code> 
             <code id="4"class="code prettyprint">console.log(0 || 1 && false || "Аниме");</code>
             <code id="5"class="code prettyprint">var res = 1;<br>var res = 2;<br>const result = res;</code>
-        </pre></div>
-        
+            <code id="6"class="code prettyprint"> В javaScript n типов данных </code>
+            <code id="7"class="code prettyprint"> var x = 2;<br>{ var x = 1; }<br>console.log(x);</code>
+            <code id="8"class="code prettyprint"> let x = 10;<br>{ let x = 25; }<br>console.log(x); </code>
+
+
+          
+        </pre>
+        </div>
+
         <div class="quiz-header">
 
             <h2 id="question"></h2>
-            <ul>    
+            <ul>
                 <li><input type="radio" id="a" name="answer" class="answer">
                     <label class="a l" id="a_text" for="a"></label>
                 </li>
@@ -66,20 +75,20 @@
                 </li>
             </ul>
 
-          
+
 
         </div>
         <button id="btn">Ответ</button>
     </div>
     <script>
         window.onload = function () {
-          document.body.classList.add('loaded_hiding');
-          window.setTimeout(function () {
-            document.body.classList.add('loaded');
-            document.body.classList.remove('loaded_hiding');
-          }, 500);
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
         }
-      </script>
+    </script>
     <script src="dist/bundle.js"></script>
     <script src="./src/module/whiteTheme.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
