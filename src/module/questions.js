@@ -45,7 +45,7 @@ const quizData = [
         id: '5',
     },
     {
-        question: 'Чему будет равна n?',
+        question: 'Чему будет равен x?',
         a: '8',
         b: '6',
         c: '7',
@@ -72,6 +72,25 @@ const quizData = [
         correct: 'a',
         id: '8',
     },
+    {
+        question: 'Что выведет в консоль?',
+        a: '5',
+        b: 'undefined',
+        c: 'null',
+        d: 'ReferenceError',
+        correct: 'd',
+        id: '9',
+    },
+
+    {
+        question: 'Чему будет равен x?',
+        a: '8',
+        b: '7',
+        c: '1',
+        d: '4',
+        correct: 'b',
+        id: '10',
+    }
 ];
 
 export default quizData;
