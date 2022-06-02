@@ -122,4 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     totalQuest(total, currentQuiz, quizData.length);
-})
+});
+
+
+
+
+

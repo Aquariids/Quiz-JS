@@ -222,3 +222,17 @@ input:checked + label:before {
 .question-block div {
     text-align: center;
 }
+
+
+.white {
+
+    color: red;
+    background: #eee;
+}
+
+a {
+    padding: 5px;
+    float: right;
+    text-decoration: none;
+    color: #50688b;
+}
