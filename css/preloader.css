@@ -7,7 +7,8 @@
   
   overflow: hidden;
   /* фоновый цвет */
-  background-color:#9e9a9a ;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.651), rgba(173, 182, 182, 0.856));
 
   z-index: 1001;
 }
