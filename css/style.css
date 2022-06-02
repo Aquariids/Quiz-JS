@@ -47,6 +47,7 @@ ul {
 button {
     background-color: #21262D;
     display: block;
+    color:#FFF;
     width: 100%;
     padding: 25px;
     outline: none;
