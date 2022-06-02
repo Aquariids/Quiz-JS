@@ -191,11 +191,9 @@ input:checked + label:before {
   }
 
   @keyframes ani {
-    0% {transform: translateX(15%);}
-    100% {transform: translateY(0);}
+    0% {transform: translateX(10%);}
   }
   .container code {
-    transform: translateX(20%);
     animation: ani 1s forwards;
    
   }
@@ -231,7 +229,6 @@ input:checked + label:before {
     display: block;
 }
 
-<<<<<<< HEAD
 .question-block div {
     text-align: center;
 }
@@ -249,5 +246,3 @@ a {
     text-decoration: none;
     color: #50688b;
 }
-=======
->>>>>>> main
