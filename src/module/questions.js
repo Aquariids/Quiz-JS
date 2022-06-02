@@ -45,7 +45,7 @@ const quizData = [
         id: '5',
     },
     {
-        question: 'Чему будет равен x?',
+        question: 'Чему будет равно n?',
         a: '8',
         b: '6',
         c: '7',
@@ -83,7 +83,7 @@ const quizData = [
     },
 
     {
-        question: 'Чему будет равен x?',
+        question: 'Чему будет равно n?',
         a: '8',
         b: '7',
         c: '1',
