@@ -7,13 +7,13 @@
     right: 0;
     bottom: 0;
     /* фоновый цвет элемента */
-    background: #161B22;
+    background: #252627;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
   }
   
   .loaded_hiding .preloader {
-    transition: 0.5s opacity;
+    transition: .6s opacity;
     opacity: 0;
   }
   
