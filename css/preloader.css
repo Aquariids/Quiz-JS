@@ -4,11 +4,14 @@
   top: 0;
   right: 0;
   bottom: 0;
+  
   overflow: hidden;
   /* фоновый цвет */
-  background: #e0e0e0;
+  background-color:#9e9a9a ;
+
   z-index: 1001;
 }
+
 
 .preloader__image {
   position: relative;
