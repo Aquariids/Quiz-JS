@@ -107,17 +107,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const percent = Math.floor(score / quizData.length * 100);
                 // Результат
                 const blockInterval = setInterval(() => {
-        
+
                     if (localStorage.getItem('theme') === 'white') {
                         document.querySelector('#black-icon').style.display = 'none';
                         quiz.innerHTML = `
-                        <div id="white-icon" class="icon" ><img class="picture" src="./icons/icon2.png" alt="hi1"> </div>    
+                        <div id="white-icon" class="icon" ><img class="picture-white" src="./icons/icon2.png" alt="hi1"> </div>    
                         <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
                         <button class="button-reloaded" onClick="location.reload()"> Попробовать еще раз </button>
                 `
                     } else {
                         quiz.innerHTML = `
-                            <div id="black-icon" class="icon"><img class="picture" src="./icons/icon.png" alt="hi"> </div>
+                            <div id="black-icon" class="icon"><img class="picture-black" src="./icons/icon.png" alt="hi"> </div>
                             <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
                             <button class="button-reloaded" onClick="location.reload()"> Попробовать еще раз </button>
                             `

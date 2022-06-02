@@ -66,8 +66,12 @@ button:hover {
 
 }
 
-.picture {
-    background-image: url(./icon.png);   
+.picture-black {
+    background-image: url(..icons/icon.png);   
+}
+
+.picture-white {
+    background-image: url(../icons/icon2.png);   
 }
 
 
@@ -256,3 +260,7 @@ a {
 }
 
 
+.themetoggle {
+    user-select:none;
+   
+}
