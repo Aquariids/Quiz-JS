@@ -1,0 +1,29 @@
+
+.white {
+    background-color: #fff;
+    color: #24292f;
+    
+}
+
+.not-right {
+    
+    text-shadow: 0 0 0 rgb(255, 13, 0);
+
+}
+
+.wrong {
+    text-shadow: 0 0 0 rgb(221, 37, 37);
+}
+
+.right {
+    display: inline;
+    text-shadow: 0 0 0 rgb(0, 255, 30);
+}
+
+.middle {
+    text-shadow: 0 0 0 rgb(225, 255, 1);
+}
+ 
+.bad {
+    text-shadow: 0 0 0 rgb(245, 162, 9);
+}

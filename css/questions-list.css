@@ -1,0 +1,50 @@
+h2 {
+  margin: 0 auto;
+  color: transparent;
+  text-shadow: 0 0 0 rgb(253, 251, 251);
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+
+li {
+  margin: 15px 0;
+}
+input {
+  display: none;
+}
+
+
+
+label {
+  color: transparent;
+  cursor: pointer;
+  text-shadow: 0 0 0 rgb(255, 254, 254);
+}
+
+
+label:before {
+content: " ";
+display: inline-block;
+text-align: center;
+margin: 3px 8px 0 5px;
+width: 12px;
+height: 12px;
+background: #FFF;
+border-radius: 50%;
+}
+
+input:checked + label:before {
+  background: #50688b;
+
+}
+
+input:disabled + label:before {
+  background: #eee;
+  color: #aaa;
+}
