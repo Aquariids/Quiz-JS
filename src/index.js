@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         labels,
         codeForQuestion
     } = allDomElements
-    
-    
+
+
     // Текущий вопросо
     let currentQuiz = 0;
     // количество правильно отвеченых вопросов
@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         b_text.innerText = currentQuizData.b;
         c_text.innerText = currentQuizData.c;
         d_text.innerText = currentQuizData.d;
-    
+
     }
-    
-    
-    
+
+
+
     hideCode(codeForQuestion);
-    showCodeQuiz(codeForQuestion,currentQuiz);
-    
-    
+    showCodeQuiz(codeForQuestion, currentQuiz);
+
+
     // тут мы получаем айдишник ответа который выбрали
     function getSelected(selector) {
         let answer = undefined;
@@ -59,18 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (answerEl.checked) {
                 return answer = answerEl.id;
             }
-    
-    
+
+
         });
-    
+
         return answer;
     }
-    
+
     // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
     btn.addEventListener('click', () => {
-        
+
         const answer = getSelected(answerEls);
-        let correctAnswer = quizData[currentQuiz].correct; 
+        let correctAnswer = quizData[currentQuiz].correct;
 
         if (answer) { // если ответ есть
             if (answer === correctAnswer) { // если ответ совпадает с правильным
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 addColorAnswer(`.${correctAnswer}`); // подсвечиваем правильный если ответили не правильно
             }
-            if(answer !== correctAnswer) { // если ответ не правильный, то добавляем красный
+            if (answer !== correctAnswer) { // если ответ не правильный, то добавляем красный
                 addNotRightAnswer(`.${answer}`)
             }
             currentQuiz++;
@@ -93,38 +93,46 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     loadQuiz();
                     hideCode(codeForQuestion);
-                    showCodeQuiz(codeForQuestion,currentQuiz);
+                    showCodeQuiz(codeForQuestion, currentQuiz);
                     blockFocus(labels, btn); // разблокируем кнопку
                     clearInterval(blockInterval);
-    
+
                 }, 1000)
-    
-    
+
+
             } else {
+
+
                 // Вычесляем процент правильных ответов
                 const percent = Math.floor(score / quizData.length * 100);
                 // Результат
-                    const blockInterval = setInterval(() => {
-                    quiz.innerHTML = `
-                    <div id="black-icon" class="icon"><img class="picture" src="./icons/icon.png" alt="hi"> </div>
-                    <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
-                    <button class="buttonReloaded" onClick="location.reload()"> Попробовать еще раз </button>
+                const blockInterval = setInterval(() => {
+        
+                    if (localStorage.getItem('theme') === 'white') {
+                        document.querySelector('#black-icon').style.display = 'none';
+                        quiz.innerHTML = `
+                        <div id="white-icon" class="icon" ><img class="picture" src="./icons/icon2.png" alt="hi1"> </div>    
+                        <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
+                        <button class="button-reloaded" onClick="location.reload()"> Попробовать еще раз </button>
                 `
+                    } else {
+                        quiz.innerHTML = `
+                            <div id="black-icon" class="icon"><img class="picture" src="./icons/icon.png" alt="hi"> </div>
+                            <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
+                            <button class="button-reloaded" onClick="location.reload()"> Попробовать еще раз </button>
+                            `
+                    }
+
                     clearInterval(blockInterval);
-    
+
                 }, 1000)
-    
-    
+
+
             }
         }
-    
+
     });
-    
-    
+
+
     totalQuest(total, currentQuiz, quizData.length);
 });
-
-
-
-
-

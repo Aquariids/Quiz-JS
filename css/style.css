@@ -158,7 +158,7 @@ input:checked + label:before {
   }
 
 
-  .buttonReloaded {
+  .button-reloaded {
     display: flex;
     align-items: center;
     justify-content: center;
