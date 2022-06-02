@@ -1,4 +1,5 @@
-const quizData = [{
+const quizData = [
+    {
         question: 'Что выведет в консоль?',
         a: '"false"',
         b: '1',
