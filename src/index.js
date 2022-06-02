@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Результат
                     const blockInterval = setInterval(() => {
                     quiz.innerHTML = `
-                    <div class="hi"><img class="picture" src="icon.png" alt="hi">  </div>
+                    <div id="black-icon" class="icon"><img class="picture" src="./icons/icon.png" alt="hi"> </div>
                     <h2 style="text-align: center; padding: 10px 0 10px 0;"> Ваш результат: <p class='right'>${score}</p> из ${quizData.length} <span class="percent"> ${percent}% </span> ${percentForAnswer(percent)} </h2>
                     <button class="buttonReloaded" onClick="location.reload()"> Попробовать еще раз </button>
                 `
