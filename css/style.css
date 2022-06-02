@@ -48,12 +48,10 @@ button {
     background-color: #21262D;
     display: block;
     width: 100%;
-    color: #fff;
     padding: 25px;
     outline: none;
     border: none;
     border-radius: 7px;
-
     font-size: 20px;
     cursor: pointer;
     
