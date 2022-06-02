@@ -20,7 +20,8 @@ body {
     align-items: center;
     justify-content: center;
     color:#C9D1D9;
-    font-family: system;     
+    font-family: system;   
+    
 }
 
 .quiz-container {
@@ -188,8 +189,19 @@ input:checked + label:before {
       justify-content: center;
       align-items: center;
   }
+
+  @keyframes ani {
+    0% {transform: translateX(15%);}
+    100% {transform: translateY(0);}
+  }
+  .container code {
+    transform: translateX(20%);
+    animation: ani 1s forwards;
+   
+  }
   
 .question-block{
+    overflow: hidden;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -219,6 +231,7 @@ input:checked + label:before {
     display: block;
 }
 
+<<<<<<< HEAD
 .question-block div {
     text-align: center;
 }
@@ -236,3 +249,5 @@ a {
     text-decoration: none;
     color: #50688b;
 }
+=======
+>>>>>>> main
