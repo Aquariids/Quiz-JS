@@ -136,3 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     totalQuest(total, currentQuiz, quizData.length);
 });
+
+
+var res = 1;
+var res = 2;
+const result = res
+
+console.log(r);
