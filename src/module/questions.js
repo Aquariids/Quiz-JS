@@ -90,7 +90,35 @@ const quizData = [
         d: '4',
         correct: 'b',
         id: '10',
-    }
+    },
+
+    {
+        question: 'Что выведет в консоль?',
+        a: 'number',
+        b: 'boolean',
+        c: 'string',
+        d: '5',
+        correct: 'c',
+        id: '11',
+    },
+    {
+        question: 'Что выведет в консоль?',
+        a: 'false',
+        b: 'boolean',
+        c: 'true',
+        d: '"10"',
+        correct: 'a',
+        id: '12',
+    },
+    {
+        question: 'Что выведет в консоль?',
+        a: '12',
+        b: '10',
+        c: '9',
+        d: '11',
+        correct: 'd',
+        id: '13',
+    },
 ];
 
 export default quizData;

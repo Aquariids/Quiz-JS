@@ -23,7 +23,7 @@ function addNotRightAnswer(classes) {
     return document.querySelector(classes).classList.toggle('not-right');
 }
 
-// колличество отвеченных вопросов
+// количество отвеченных вопросов
 function totalQuest(selector, currentQuest, allQuest) {
     selector.textContent = `${currentQuest}/${allQuest  }`
 }
