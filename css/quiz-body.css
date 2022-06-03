@@ -1,5 +1,8 @@
 
 
+@keyframes ani {
+  0% {transform: translateX(10%);}
+}
 
 .quiz-container {
     background-color: #0D1117;
@@ -10,9 +13,6 @@
 }
 
 
-.quiz-header {
-    padding: 35px;
-}
 
 .code-container {
     width: 100%;
@@ -22,9 +22,6 @@
     align-items: center;
 }
 
-@keyframes ani {
-  0% {transform: translateX(10%);}
-}
 .code-container code {
   animation: ani 1s forwards;
  
@@ -36,6 +33,7 @@
 }
 
 .question-block{
+  
   overflow: hidden;
   align-items: center;
   display: flex;

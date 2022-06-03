@@ -8,6 +8,7 @@ const quizData = [
         correct: 'a',
         id: '1',
     },
+
     {
         question: 'Какое значение будет в result?',
         a: 'null',
@@ -17,6 +18,7 @@ const quizData = [
         correct: 'd',
         id: '2',
     },
+
     {
         question: 'Какое значение будет в result?',
         a: 'boolean',
@@ -26,6 +28,7 @@ const quizData = [
         correct: 'a',
         id: '3',
     },
+
     {
         question: 'Что выведет в консоль?',
         a: 'false',
@@ -35,6 +38,7 @@ const quizData = [
         correct: 'b',
         id: '4',
     },
+
     {
         question: 'Какое значение будет в result?',
         a: 'null',
@@ -44,6 +48,7 @@ const quizData = [
         correct: 'c',
         id: '5',
     },
+
     {
         question: 'Чему будет равно n?',
         a: '8',
@@ -53,12 +58,13 @@ const quizData = [
         correct: 'a',
         id: '6',
     },
+
     {
         question: 'Что выведет в консоль?',
         a: '2',
         b: 'undefined',
         c: '1',
-        d: '"2"',
+        d: 'null',
         correct: 'c',
         id: '7',
     },
@@ -72,6 +78,7 @@ const quizData = [
         correct: 'a',
         id: '8',
     },
+
     {
         question: 'Что выведет в консоль?',
         a: '5',
@@ -101,6 +108,7 @@ const quizData = [
         correct: 'c',
         id: '11',
     },
+
     {
         question: 'Что выведет в консоль?',
         a: 'false',
@@ -110,6 +118,7 @@ const quizData = [
         correct: 'a',
         id: '12',
     },
+
     {
         question: 'Что выведет в консоль?',
         a: '12',
@@ -119,6 +128,8 @@ const quizData = [
         correct: 'd',
         id: '13',
     },
+
+
     {
         question: 'Что выведет в консоль?',
         a: '1 2 3 4 5',
@@ -128,6 +139,8 @@ const quizData = [
         correct: 'b',
         id: '14',
     },
+
+
     {
         question: 'Что выведет в консоль?',
         a: '10 14 18',
@@ -137,8 +150,61 @@ const quizData = [
         correct: 'c',
         id: '15',
     },
+
+
+    {
+        question: 'Что выведет в консоль?',
+        a: 'TypeError',
+        b: 'undefined',
+        c: '4',
+        d: 'ReferenceError',
+        correct: 'c',
+        id: '16',
+    }, 
+
+
+    {
+        question: 'Какое значение будет в res?',
+        a: 'undefined',
+        b: 'null',
+        c: '"0"',
+        d: 'object',
+        correct: 'd',
+        id: '17',
+    },
+
+    {
+        question: 'Что выведет в консоль?',
+        a: '6 1 3',
+        b: 'null',
+        c: 'ReferenceError',
+        d: 'undefined',
+        correct: 'a',
+        id: '18',
+    },
+    {
+        question: 'Что выведет в консоль?',
+        a: '5',
+        b: '10',
+        c: 'undefined',
+        d: '1',
+        correct: 'b',
+        id: '19',
+    },
+
+    {
+        question: 'Что выведет в консоль?',
+        a: 'NaN',
+        b: '9',
+        c: '0',
+        d: 'TypeError',
+        correct: 'b',
+        id: '20',
+    },
 ];
 
+
 export default quizData;
+
 
 

@@ -49,10 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
     hideCode(codeForQuestion);
     showCodeQuiz(codeForQuestion, currentQuiz);
-
 
     // тут мы получаем айдишник ответа который выбрали
     function getSelected(selector) {
@@ -67,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return answer;
     }
+
 
     // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
     btn.addEventListener('click', () => {
@@ -106,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } else {
 
-
                 // Вычесляем процент правильных ответов
                 const percent = Math.floor(score / quizData.length * 100);
                 // Результат
@@ -135,8 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-    });
 
+    });
 
     totalQuest(total, currentQuestions, quizData.length);
 });
+

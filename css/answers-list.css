@@ -8,16 +8,13 @@ h2 {
   margin: 0 auto;
   color: transparent;
   text-shadow: 0 0 0 rgb(253, 251, 251);
-
 }
 
 ul {
   
   list-style: none;
   padding: 0;
-
 }
-
 
 li {
   margin: 15px 0;
@@ -48,7 +45,6 @@ border-radius: 50%;
 
 input:checked + label:before {
   background: #50688b;
-
 }
 
 input:disabled + label:before {
