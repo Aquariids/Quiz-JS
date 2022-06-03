@@ -119,6 +119,24 @@ const quizData = [
         correct: 'd',
         id: '13',
     },
+    {
+        question: 'Что выведет в консоль?',
+        a: '1 2 3 4 5',
+        b: '0 1 2 3 4',
+        c: 'undefined',
+        d: 'TypeError',
+        correct: 'b',
+        id: '14',
+    },
+    {
+        question: 'Что выведет в консоль?',
+        a: '10 14 18',
+        b: 'a b c',
+        c: 'TypeError',
+        d: 'null',
+        correct: 'c',
+        id: '15',
+    },
 ];
 
 export default quizData;

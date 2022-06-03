@@ -31,13 +31,13 @@ function totalQuest(selector, currentQuest, allQuest) {
 // указываем в конце теста текст от процента отвеченных
 function percentForAnswer(percent) {
     if (percent === 100) {
-        return " <div class='result-text'> <span class='right'> Отлично, можешь собой гордиться!</span> </div>"
-    } else if (percent >= 60 && percent != 100) {
+        return "<div class='result-text'> <span class='right'> Отлично, можешь собой гордиться!</span> </div>"
+    } else if (percent > 55 && percent != 100) {
         return " <div class='result-text'> <span class='middle'> Хорошо, но есть ошибки!</span> </div>"
-    } else if (percent <= 50 && percent != 0 && percent > 20) {
+    } else if (percent < 55 && percent != 0 && percent > 30) {
         return "<div class='result-text'> <span class='bad'> Могло бы быть и хуже, попробуй еще! </span> </div>";
-    } else if (percent <= 20 && percent != 0) {
-        return "<div class='result-text'> <span class='bad'>Попытка не пытка! </span> </div>";
+    } else if (percent < 30 && percent != 0) {
+        return "<div class='result-text'> <span class='bad'>Попытка не пытка!</span> </div>";
     } else if (percent === 0) {
         return "<div class='result-text'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
     }

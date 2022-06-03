@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (answer !== correctAnswer) { // если ответ не правильный, то добавляем красный
                 addNotRightAnswer(`.${answer}`)
             }
-     
+
             currentQuiz++;
             currentQuestions++
             blockFocus(labels, btn); // блокируем кнопку для нажатий
