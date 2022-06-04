@@ -3,11 +3,11 @@
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0;  
   
   overflow: hidden;
   /* фоновый цвет */
-  background-color:#9e9a9a ;
+  background: linear-gradient(rgb(212, 212, 212), rgb(112, 111, 111));
 
   z-index: 1001;
 }

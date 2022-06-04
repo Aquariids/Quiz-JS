@@ -1,0 +1,25 @@
+
+.picture-black {
+    background-image: url(..icons/icon.png);   
+}
+
+.picture-white {
+    background-image: url(../icons/icon2.png);   
+}
+
+
+
+.icon {
+    user-select:none;
+    color: transparent;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon-white {
+    
+        display: none;
+
+}

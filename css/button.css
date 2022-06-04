@@ -1,0 +1,30 @@
+
+button {
+    background-color: #21262D;
+    display: block;
+    color:#FFF;
+    width: 100%;
+    padding: 25px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #2c3035;
+
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.button-reloaded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    padding: 5px;
+    
+  }

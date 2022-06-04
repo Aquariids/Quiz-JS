@@ -29,8 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } = allDomElements
 
 
-    // Текущий вопросо
+    // Текущий вопрос
     let currentQuiz = 0;
+    // для указания в total текущего вопроса
+    let currentQuestions = 1;
     // количество правильно отвеченых вопросов
     let score = 0;
     loadQuiz();
@@ -47,10 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
     hideCode(codeForQuestion);
     showCodeQuiz(codeForQuestion, currentQuiz);
-
 
     // тут мы получаем айдишник ответа который выбрали
     function getSelected(selector) {
@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return answer;
     }
+
 
     // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
     btn.addEventListener('click', () => {
@@ -82,8 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (answer !== correctAnswer) { // если ответ не правильный, то добавляем красный
                 addNotRightAnswer(`.${answer}`)
             }
+
             currentQuiz++;
-            totalQuest(total, currentQuiz, quizData.length);
+            currentQuestions++
             blockFocus(labels, btn); // блокируем кнопку для нажатий
             if (currentQuiz < quizData.length) {
                 const blockInterval = setInterval(() => {
@@ -91,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (answer !== correctAnswer) {
                         addNotRightAnswer(`.${answer}`); // убираем для неправильного
                     }
+                    totalQuest(total, currentQuestions, quizData.length);
                     loadQuiz();
                     hideCode(codeForQuestion);
                     showCodeQuiz(codeForQuestion, currentQuiz);
@@ -101,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             } else {
-
 
                 // Вычесляем процент правильных ответов
                 const percent = Math.floor(score / quizData.length * 100);
@@ -131,8 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+
     });
 
-
-    totalQuest(total, currentQuiz, quizData.length);
+    totalQuest(total, currentQuestions, quizData.length);
 });
+
