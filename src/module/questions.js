@@ -44,7 +44,7 @@ const quizData = [
         a: 'null',
         b: '1',
         c: '2',
-        d: 'throw a SyntaxError',
+        d: 'SyntaxError',
         correct: 'c',
         id: '5',
     },
@@ -72,7 +72,7 @@ const quizData = [
     {
         question: 'Что выведет в консоль?',
         a: '10',
-        b: 'throw a SyntaxError',
+        b: 'SyntaxError',
         c: 'undefined',
         d: '25',
         correct: 'a',
