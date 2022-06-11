@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   watch: true,
-   
+  devtool: "source-map",
   plugins: [
     new MiniCssExtractPlugin({
       filename: "style.min.css",
