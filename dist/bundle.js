@@ -1,7 +1,77 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 201:
+/***/ (() => {
+
+theme()
+function theme () {
+    if(localStorage.getItem('theme') === 'white') {
+        document.querySelector('body').classList.add('white')
+        document.querySelector('#moon').style.display = 'block';
+        document.querySelector('#moon').style.color = '#fff';
+        document.querySelector('#sun').style.display = 'none';
+        document.querySelector('.total').style.color = '#fff';
+        document.querySelector('#black-icon').style.display = 'none';
+        document.querySelector('#white-icon').style.display = 'flex';
+
+        
+    } 
+    else {
+        document.querySelector('body').classList.remove('white');
+        document.querySelector('#moon').style.display = 'none';
+        document.querySelector('.preloader').style.background = '#000000';
+        document.querySelector('#sun').style.display = 'block';
+        document.querySelector('.total').style.color = '#C9D1D9';
+        document.querySelector('#black-icon').style.display = 'flex';
+        document.querySelector('#white-icon').style.display = 'none';
+    }
+
+}
+
+
+    document.querySelector('.themetoggle').addEventListener('click', (e)=> {
+        e.preventDefault();
+        if(localStorage.getItem('theme') === 'white')  {
+            localStorage.removeItem('theme', 'white');
+        } else {
+            localStorage.setItem('theme', 'white');
+        }
+        
+        theme()
+
+    })
+
+// я новичок, не ругайтесь, ладно.
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
@@ -34,6 +104,9 @@
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
 
 // NAMESPACE OBJECT: ./src/module/additionalFun.js
 var additionalFun_namespaceObject = {};
@@ -57,6 +130,8 @@ __webpack_require__.d(bodyQuiz_namespaceObject, {
   "loadQuiz": () => (loadQuiz)
 });
 
+// EXTERNAL MODULE: ./src/module/whiteTheme.js
+var whiteTheme = __webpack_require__(201);
 ;// CONCATENATED MODULE: ./src/module/questions.js
 const quizData = [
     {
@@ -472,6 +547,7 @@ function button_button(currentQuiz, score, additionalFun, allDomElements,getSele
 
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const {loadQuiz,getSelected} = bodyQuiz_namespaceObject;
     const {
@@ -496,6 +572,8 @@ document.addEventListener('DOMContentLoaded', () => {
     totalQuest(total, currentQuiz, questions.length);
    
 });
+
+})();
 
 /******/ })()
 ;
