@@ -25,6 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showCodeQuiz(codeForQuestion, currentQuiz);
     // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
     button(currentQuiz,score,additionalFun,allDomElements,getSelected,quizData,loadQuiz);
-    additionalFun.totalQuest(allDomElements.total, currentQuiz, quizData.length);
+    totalQuest(total, currentQuiz, quizData.length);
    
 });

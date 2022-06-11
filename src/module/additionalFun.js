@@ -45,6 +45,7 @@ function percentForAnswer(percent) {
         return "<div class='result-text'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
     }
 }
+
 // скрываем код для вопросов
 function hideCode(selector) {
     selector.forEach((item, ) => {
