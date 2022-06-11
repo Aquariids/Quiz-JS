@@ -55,9 +55,22 @@ function hideCode(selector) {
 }
 // Показываю код обратно
 function showCodeQuiz(selector, id) {
-    selector[id].classList.remove('hide');
-    selector[id].classList.add('show');
+    if(+selector[id].id === id + 1) {
+        selector[id].classList.remove('hide');
+        selector[id].classList.add('show');
+    } else {
+        let wrapperCode = document.querySelector('.question-block');
+        wrapperCode.style.color = 'red';
+        wrapperCode.style.fontSize = '15px';
+        wrapperCode.style.padding = '5px';
+        wrapperCode.style.fontWeight = '700'
+        
+        wrapperCode.textContent = 'Ошибка! Вопрос и ответы, не совпадают с кодом на экране!'
+
+
+    }
 }
+
 
 export {
     blockFocus,
