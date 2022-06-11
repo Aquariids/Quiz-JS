@@ -1,5 +1,6 @@
 
 // функция где мы помещаем на страницу вопрос и ответы
+
 function loadQuiz(currentQuiz,deleteSelectAnswers,allDomElements,quizData) {
     deleteSelectAnswers(allDomElements.answerEls);
     const currentQuizData = quizData[currentQuiz];

@@ -27,15 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     // подгружаем ответы и вопросы
     loadQuiz(currentQuiz, deleteSelectAnswers, allDomElements, quizData);
-    // скрываем код для вопросов в html
+    // скрываем код для опросов в html
     hideCode(codeForQuestion);
-
-    // показываем нужный код для конкретного вопроса
+    // показываем
     showCodeQuiz(codeForQuestion, currentQuiz);
-
     // при нажатии на кнопку  подгружаем след вопрос, если был дан ответ
     button(currentQuiz, score, additionalFun, allDomElements, getSelected, quizData, loadQuiz);
-    // показываем количество вопросов и на каком находимся.
     totalQuest(total, currentQuiz, quizData.length);
 
 });

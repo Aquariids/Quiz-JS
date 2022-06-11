@@ -14,7 +14,6 @@ export default function button(currentQuiz, score, additionalFun, allDomElements
             if (answer !== correctAnswer) { // если ответ не правильный, то добавляем красный
                 additionalFun.addNotRightAnswer(`.${answer}`)
             }
-
             currentQuiz++;
             additionalFun.blockFocus(allDomElements.labels, allDomElements.btn); // блокируем кнопку для нажатий
             if (currentQuiz < quizData.length) {
@@ -28,7 +27,6 @@ export default function button(currentQuiz, score, additionalFun, allDomElements
                     additionalFun.hideCode(allDomElements.codeForQuestion);
                     additionalFun.showCodeQuiz(allDomElements.codeForQuestion, currentQuiz);
                     additionalFun.blockFocus(allDomElements.labels, allDomElements.btn); // разблокируем кнопку
-                    
                     clearInterval(blockInterval);
 
                 }, 1000)
