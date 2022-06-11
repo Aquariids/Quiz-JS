@@ -1,3 +1,4 @@
+import "../css/style.css";
 import quizData from "./module/questions";
 import * as additionalFun from "./module/additionalFun";
 import allDomElements from "./module/domElements";
