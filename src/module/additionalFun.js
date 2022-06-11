@@ -25,7 +25,10 @@ function addNotRightAnswer(classes) {
 
 // количество отвеченных вопросов
 function totalQuest(selector, currentQuest, allQuest) {
-    selector.textContent = `${currentQuest}/${allQuest  }`
+    if(currentQuest < allQuest) {
+        selector.textContent = `${currentQuest += 1}/${allQuest}`
+    }
+    
 }
 
 // указываем в конце теста текст от процента отвеченных
