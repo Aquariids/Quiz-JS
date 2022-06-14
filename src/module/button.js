@@ -1,6 +1,6 @@
 export default function button(currentQuiz, score, additionalFun, allDomElements,getSelected,quizData,loadQuiz,) {
     allDomElements.btn.addEventListener('click', () => {
-
+        let score = 0;
         const answer = getSelected(allDomElements.answerEls);
         let correctAnswer = quizData[currentQuiz].correct;
 
