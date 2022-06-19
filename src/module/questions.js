@@ -201,6 +201,16 @@ const quizData = [
         correct: 'b',
         id: '20',
     },
+
+    {
+        question: 'Что выведет в консоль?',
+        a: '10',
+        b: '100',
+        c: '25',
+        d: 'undefined',
+        correct: 'b',
+        id: '21',
+    },
 ];
 
 
