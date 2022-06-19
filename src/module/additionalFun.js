@@ -25,7 +25,10 @@ function addNotRightAnswer(classes) {
 
 // количество отвеченных вопросов
 function totalQuest(selector, currentQuest, allQuest) {
-    selector.textContent = `${currentQuest}/${allQuest  }`
+    if(currentQuest < allQuest) {
+        selector.textContent = `${currentQuest += 1}/${allQuest}`
+    }
+    
 }
 
 // указываем в конце теста текст от процента отвеченных
@@ -42,6 +45,7 @@ function percentForAnswer(percent) {
         return "<div class='result-text'> <span class ='wrong'> Ой, да ну, ты прикалываешься!? </span> </div>";
     }
 }
+
 // скрываем код для вопросов
 function hideCode(selector) {
     selector.forEach((item, ) => {

@@ -1,14 +1,4 @@
 
-.picture-black {
-    background-image: url(..icons/icon.png);   
-}
-
-.picture-white {
-    background-image: url(../icons/icon2.png);   
-}
-
-
-
 .icon {
     user-select:none;
     color: transparent;
